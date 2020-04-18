@@ -1,5 +1,5 @@
 {
-    "name": "frontend-dashboard-notification",
+    "name": "buffercode/frontend-dashboard-notification",
     "description": "Frontend Dashboard Notification",
     "type": "project",
     "require": {
