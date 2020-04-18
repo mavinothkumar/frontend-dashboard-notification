@@ -33,6 +33,12 @@ function fed_ntf_default_admin_scripts_styles( $scripts ) {
 		'media'        => 'all',
 	);
 
+	$scripts['styles']['wp-block'] = array(
+		'wp_core'     => true,
+		'name'        => 'WP Blocks',
+		'plugin_name' => 'Frontend Dashboard Notification',
+	);
+
 	return $scripts;
 }
 

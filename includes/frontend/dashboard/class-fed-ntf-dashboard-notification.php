@@ -26,9 +26,22 @@ if ( ! class_exists( 'FED_NTF_Dashboard_Notification' ) ) {
 				$notification_object = new FED_NTF_Notification_Controller();
 				$notifications       = $notification_object->get();
 				foreach ( $notifications as $notification ) {
-					add_action( 'fed_dashboard_content_outside_top', function () {
-						echo 'hl';
-					} );
+					$notification_meta = get_post_meta( $notification->ID, 'fed_ntf_notification', true );
+					if (
+						isset( $notification_meta['locations'], $notification_meta['menus'] ) &&
+						count( $notification_meta['locations'] ) &&
+						count( $notification_meta['menus'] )
+					) {
+						foreach ( $notification_meta['menus'] as $menu ) {
+							foreach ( $notification_meta['locations'] as $location ) {
+								add_action( 'fed_dashboard_' . $location . '_' . $menu,
+									function () use ( $notification ) {
+										echo wp_kses_post( $notification->post_content );
+									}
+								);
+							}
+						}
+					}
 				}
 			}
 		}

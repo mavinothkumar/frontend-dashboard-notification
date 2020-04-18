@@ -25,6 +25,7 @@ if ( ! class_exists( 'FED_NTF_Notification_Controller' ) ) {
 			$options = array(
 				'numberposts' => - 1,
 				'post_type'   => 'fed-notification',
+				'post_status' => 'publish',
 				'meta_query'  => array(
 					array(
 						'key'   => 'fed_ntf_notification_status',
