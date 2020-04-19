@@ -195,6 +195,7 @@ if ( ! class_exists( 'FED_NTF_Main_Menu' ) ) {
 								<div class="panel-body">
 									<?php
 									if ( is_string( $submenu ) ) {
+										// phpcs:ignore
 										fed_execute_method_by_string( $submenu, $_GET );
 									}
 									?>
@@ -208,6 +209,7 @@ if ( ! class_exists( 'FED_NTF_Main_Menu' ) ) {
 						$sub_menu_action = $menus[ $menu ]['submenu'];
 						$extra_label     = '';
 						if ( isset( $menus[ $menu ]['routes'] ) && is_array( $menus[ $menu ]['routes'] ) ) {
+							// phpcs:ignore
 							$route_value = fed_get_data( 'route', $_GET, false );
 							if ( array_key_exists( $route_value, $menus[ $menu ]['routes'] ) ) {
 								$sub_menu_action = $route_value;
@@ -226,7 +228,10 @@ if ( ! class_exists( 'FED_NTF_Main_Menu' ) ) {
 											<?php echo esc_attr( $menus[ $menu ]['name'] . $extra_label ); ?></h3>
 									</div>
 									<div class="panel-body">
-										<?php fed_execute_method_by_string( $sub_menu_action, $_GET ); ?>
+										<?php
+										// phpcs:ignore
+										fed_execute_method_by_string( $sub_menu_action, $_GET );
+										?>
 									</div>
 								</div>
 

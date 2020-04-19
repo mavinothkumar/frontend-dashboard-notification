@@ -26,6 +26,7 @@ if ( ! class_exists( 'FED_NTF_Notification_Controller' ) ) {
 				'numberposts' => - 1,
 				'post_type'   => 'fed-notification',
 				'post_status' => 'publish',
+				// phpcs:ignore
 				'meta_query'  => array(
 					array(
 						'key'   => 'fed_ntf_notification_status',
@@ -34,7 +35,6 @@ if ( ! class_exists( 'FED_NTF_Notification_Controller' ) ) {
 				),
 			);
 
-			// WPCS: slow query ok.
 			return get_posts( $options );
 		}
 	}

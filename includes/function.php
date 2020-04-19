@@ -5,7 +5,6 @@
  * @package frontend-dashboard-notification
  */
 
-
 /**
  * Notification Locations.
  *
