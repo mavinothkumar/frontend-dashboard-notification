@@ -167,7 +167,7 @@ if ( ! class_exists( 'FED_NTF_Custom_Meta' ) ) {
 					</div>
 					<div>
 						<?php
-						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
+						// phpcs:ignore
 						echo fed_form_select(
 							array(
 								'input_value' => $user_roles,
