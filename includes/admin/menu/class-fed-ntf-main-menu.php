@@ -241,7 +241,8 @@ if ( ! class_exists( 'FED_NTF_Main_Menu' ) ) {
 							</div>
 						</div>
 						<?php
-					} else { ?>
+					} else {
+						?>
 						<div class="alert alert-danger">
 							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 							<strong>
@@ -254,7 +255,6 @@ if ( ! class_exists( 'FED_NTF_Main_Menu' ) ) {
 							</strong>
 						</div>
 						<?php
-						// FED_Log::writeLog( 'Invalid Menu Item | Error FED|Admin|Payment|FEDPaymentMenu@body_content' );
 					}
 				}
 			} else {

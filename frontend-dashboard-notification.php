@@ -11,6 +11,7 @@
  * Text Domain: frontend-dashboard-notification
  * Domain Path: /languages
  *
+ * @package frontened-dashboard-notification
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

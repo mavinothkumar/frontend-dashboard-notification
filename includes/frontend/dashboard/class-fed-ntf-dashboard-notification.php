@@ -21,6 +21,9 @@ if ( ! class_exists( 'FED_NTF_Dashboard_Notification' ) ) {
 			add_action( 'template_redirect', array( $this, 'dashboard' ) );
 		}
 
+		/**
+		 * Fire Add Hooks inside the Dashboard.
+		 */
 		public function dashboard() {
 			if ( fed_is_dashboard() ) {
 				$notification_object = new FED_NTF_Notification_Controller();
@@ -28,17 +31,20 @@ if ( ! class_exists( 'FED_NTF_Dashboard_Notification' ) ) {
 				foreach ( $notifications as $notification ) {
 					$notification_meta = get_post_meta( $notification->ID, 'fed_ntf_notification', true );
 					if (
-						isset( $notification_meta['locations'], $notification_meta['menus'] ) &&
+						isset( $notification_meta['locations'], $notification_meta['menus'], $notification_meta['user_roles'] ) &&
 						count( $notification_meta['locations'] ) &&
+						count( $notification_meta['user_roles'] ) &&
 						count( $notification_meta['menus'] )
 					) {
-						foreach ( $notification_meta['menus'] as $menu ) {
-							foreach ( $notification_meta['locations'] as $location ) {
-								add_action( 'fed_dashboard_' . $location . '_' . $menu,
-									function () use ( $notification ) {
-										echo wp_kses_post( $notification->post_content );
-									}
-								);
+						if ( fed_is_current_user_role( $notification_meta['user_roles'], false ) ) {
+							foreach ( $notification_meta['menus'] as $menu ) {
+								foreach ( $notification_meta['locations'] as $location ) {
+									add_action( 'fed_dashboard_' . $location . '_' . $menu,
+										function () use ( $notification ) {
+											echo wp_kses_post( $notification->post_content );
+										}
+									);
+								}
 							}
 						}
 					}

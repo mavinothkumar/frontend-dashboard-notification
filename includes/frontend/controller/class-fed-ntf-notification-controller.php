@@ -34,6 +34,7 @@ if ( ! class_exists( 'FED_NTF_Notification_Controller' ) ) {
 				),
 			);
 
+			// WPCS: slow query ok.
 			return get_posts( $options );
 		}
 	}

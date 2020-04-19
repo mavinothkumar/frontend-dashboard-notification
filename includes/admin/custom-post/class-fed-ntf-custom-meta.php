@@ -71,13 +71,15 @@ if ( ! class_exists( 'FED_NTF_Custom_Meta' ) ) {
 		 */
 		public function show_meta_box() {
 			global $post;
-			$fed_ntf_notification = get_post_meta( $post->ID, 'fed_ntf_notification', true );
+			$fed_ntf_notification        = get_post_meta( $post->ID, 'fed_ntf_notification', true );
 			$fed_ntf_notification_status = get_post_meta( $post->ID, 'fed_ntf_notification_status', true );
 
 			$locations = fed_ntf_notification_locations();
 
 			$menu_items = fed_get_all_dashboard_display_menus();
 			$menu_items = wp_list_pluck( $menu_items, 'menu', 'menu_slug' );
+
+			$user_roles = fed_get_user_roles();
 			?>
 
 			<input type="hidden" name="common_author_post"
@@ -87,13 +89,14 @@ if ( ! class_exists( 'FED_NTF_Custom_Meta' ) ) {
 				<div class="fed_ntf_menu">
 					<div>
 						<label>
-							<?php esc_attr_e( 'Enable/Disable this Notification',
-								'frontend-dashboard-notification' ); ?>
+							<?php
+							esc_attr_e( 'Enable/Disable this Notification', 'frontend-dashboard-notification' );
+							?>
 						</label>
 					</div>
 					<div>
 						<?php
-						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
+						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						echo fed_form_select(
 							array(
 								'input_value' => array(
@@ -101,7 +104,10 @@ if ( ! class_exists( 'FED_NTF_Custom_Meta' ) ) {
 									'Disable' => 'Disable',
 								),
 								'input_meta'  => 'fed_notification_status',
-								'user_value'  => fed_get_data( 'fed_notification_status', $fed_ntf_notification_status, array() ),
+								'user_value'  => fed_get_data(
+									'fed_notification_status', $fed_ntf_notification_status,
+									array()
+								),
 								'extra'       => 'style="width: 20%"',
 							)
 						);
@@ -117,7 +123,7 @@ if ( ! class_exists( 'FED_NTF_Custom_Meta' ) ) {
 					</div>
 					<div>
 						<?php
-						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
+						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						echo fed_form_select(
 							array(
 								'input_value' => $locations,
@@ -145,6 +151,28 @@ if ( ! class_exists( 'FED_NTF_Custom_Meta' ) ) {
 								'input_value' => $menu_items,
 								'input_meta'  => 'fed_notification[menus]',
 								'user_value'  => fed_get_data( 'menus', $fed_ntf_notification, array() ),
+								'extra'       => 'style="width: 100%"',
+								'extended'    => array( 'multiple' => 'Enable' ),
+							)
+						);
+						?>
+					</div>
+				</div>
+
+				<div class="fed_ntf_menu">
+					<div>
+						<label>
+							<?php esc_attr_e( 'Select User Role', 'frontend-dashboard-notification' ); ?>
+						</label>
+					</div>
+					<div>
+						<?php
+						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
+						echo fed_form_select(
+							array(
+								'input_value' => $user_roles,
+								'input_meta'  => 'fed_notification[user_roles]',
+								'user_value'  => fed_get_data( 'user_roles', $fed_ntf_notification, array() ),
 								'extra'       => 'style="width: 100%"',
 								'extended'    => array( 'multiple' => 'Enable' ),
 							)
@@ -182,8 +210,9 @@ if ( ! class_exists( 'FED_NTF_Custom_Meta' ) ) {
 		private function format_data( $request_payload ) {
 
 			return array(
-				'menus'     => fed_get_data( 'fed_notification.menus', $request_payload, array() ),
-				'locations' => fed_get_data( 'fed_notification.locations', $request_payload, array() ),
+				'menus'      => fed_get_data( 'fed_notification.menus', $request_payload, array() ),
+				'locations'  => fed_get_data( 'fed_notification.locations', $request_payload, array() ),
+				'user_roles' => fed_get_data( 'fed_notification.user_roles', $request_payload, array() ),
 			);
 		}
 	}
