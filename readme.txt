@@ -2,9 +2,9 @@
 Contributors: vinoth06, buffercode
 Tags: dashboard, frontend dashboard, custom login, custom register, custom roles, custom profile, custom post type, custom taxonomies, custom dashboard, hide admin bar, widget
 Donate link: https://www.paypal.com/paypalme2/buffercode
-Requires at least: 4.6
-Tested up to: 5.4.1
-Stable tag: 1.1
+Requires at least: 5.8
+Tested up to: 7.1
+Stable tag: 3.0.0
 License: GPL V3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
