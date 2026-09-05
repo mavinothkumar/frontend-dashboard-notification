@@ -9,7 +9,7 @@
  * License: GPLv2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: frontend-dashboard-notification
- * Domain Path:/languages
+ * Domain Path: /languages
  *
  * @package frontened-dashboard-notification
  */
@@ -17,6 +17,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
 $fed_check = get_option( 'fed_plugin_version' );
 
 require_once ABSPATH . 'wp-admin/includes/plugin.php';

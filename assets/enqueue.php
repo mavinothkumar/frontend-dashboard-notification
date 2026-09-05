@@ -7,6 +7,7 @@
 
 add_filter( 'fed_default_admin_scripts_styles', 'fed_ntf_default_scripts_styles' );
 add_filter( 'fed_default_frontend_scripts_styles', 'fed_ntf_default_scripts_styles' );
+
 add_filter( 'fed_admin_script_loading_pages', 'fed_ntf_admin_script_loading_pages' );
 /**
  * Admin Scripts.

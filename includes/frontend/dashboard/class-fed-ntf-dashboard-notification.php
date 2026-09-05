@@ -98,6 +98,7 @@ if ( ! class_exists( 'FED_NTF_Dashboard_Notification' ) ) {
 			}
 		}
 
+
 		public function notification_close_action() {
 			$get_payload = filter_input_array( INPUT_GET, FILTER_SANITIZE_STRING );
 

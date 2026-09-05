@@ -74,6 +74,7 @@ if ( ! class_exists( 'FED_NTF_Custom_Meta' ) ) {
 					return str_replace( '_', ' ', $user_role );
 				}, $user_roles ) ) ) );
 			}
+
 		}
 
 		/**

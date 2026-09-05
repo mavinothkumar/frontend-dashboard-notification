@@ -22,19 +22,31 @@ Frontend Dashboard Notification is an add-on for Frontend Dashboard WordPress pl
 1. Upload the "frontend-dashboard-notification" directory to the plugins directory.
 2. Go to the plugins setting page and activate “Frontend Dashboard Notification”
 3. Go to WP Admin | Notifications and add new notification.
+=======
+Requires at least: 4.6
+Tested up to: 5.4
+Stable tag: 1.0
+License: GPL V3
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
+
+Frontend Dashboard Messages
+
+== Description ==
+
+
+
+== Installation ==
+1. Upload the “frontend-dashboard” directory to the plugins directory.
+2. Go to the plugins setting page and activate “Frontend Dashboard”
+3. Go to Frontend Dashboard | Frontend Dashboard | Check for your settings
+
 4. Do save.
 
 == Frequently Asked Questions ==
 
 
 == Changelog ==
-
-= v1.1  =
-* Public release
-
-== Upgrade Notice ==
-
-= v1.1  =
+= v1.0  =
 * Public release
 
 == Screenshots ==

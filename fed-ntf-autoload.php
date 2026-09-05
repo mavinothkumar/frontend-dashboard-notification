@@ -9,7 +9,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Admin Files
+ */
+
 $files = array(
+	'/includes/admin/menu/class-fed-ntf-main-menu.php',
+	'/includes/admin/menu/class-fed-ntf-menu-general.php',
 	'/includes/admin/custom-post/class-fed-ntf-custom-post.php',
 	'/includes/admin/custom-post/class-fed-ntf-custom-meta.php',
 	'/includes/frontend/dashboard/class-fed-ntf-dashboard-notification.php',
