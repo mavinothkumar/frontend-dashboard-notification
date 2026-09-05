@@ -1,0 +1,13 @@
+.fed_ntf_location,
+.fed_ntf_menu {
+	margin-bottom: 20px;
+}
+
+.fed_notification_close_x {
+	text-align: right;
+	cursor: pointer;
+}
+
+.fed_notification_container {
+	margin: 10px;
+}
