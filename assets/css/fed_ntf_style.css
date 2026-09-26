@@ -1,13 +1,234 @@
-.fed_ntf_location,
-.fed_ntf_menu {
-	margin-bottom: 20px;
+/**
+ * Frontend Dashboard Notification Styles
+ */
+
+/* Notification Boxes (Frontend) */
+.fed-ntf-box {
+	position: relative;
+	transition: opacity 0.25s ease, transform 0.25s ease, max-height 0.3s ease;
 }
 
-.fed_notification_close_x {
-	text-align: right;
-	cursor: pointer;
+.fed-ntf-box.fed-ntf-hiding {
+	opacity: 0;
+	transform: translateY(-8px);
 }
 
-.fed_notification_container {
-	margin: 10px;
+/* Neutral / Brand Style */
+.fed-ntf-neutral {
+	background-color: #f8fafc;
+	border-color: #e2e8f0;
+}
+
+/* Info Style */
+.fed-ntf-info {
+	background-color: #f0f9ff;
+	border-color: #bae6fd;
+}
+
+/* Success Style */
+.fed-ntf-success {
+	background-color: #f0fdf4;
+	border-color: #bbf7d0;
+}
+
+/* Warning Style */
+.fed-ntf-warning {
+	background-color: #fffbeb;
+	border-color: #fde68a;
+}
+
+/* Danger Style */
+.fed-ntf-danger {
+	background-color: #fef2f2;
+	border-color: #fecaca;
+}
+
+/* Custom Theme Color Style */
+.fed-ntf-custom,
+.fed-ntf-custom *,
+.fed-ntf-custom .fed-ntf-content,
+.fed-ntf-custom .fed-ntf-content p,
+.fed-ntf-custom .fed-ntf-content span,
+.fed-ntf-custom .fed-ntf-content div,
+.fed-ntf-custom .fed-ntf-content h1,
+.fed-ntf-custom .fed-ntf-content h2,
+.fed-ntf-custom .fed-ntf-content h3,
+.fed-ntf-custom .fed-ntf-content h4,
+.fed-ntf-custom .fed-ntf-content h5,
+.fed-ntf-custom .fed-ntf-content h6,
+.fed-ntf-custom .fed-ntf-content li,
+.fed-ntf-custom .fed-ntf-content strong,
+.fed-ntf-custom .fed-ntf-content em,
+.fed-ntf-custom .fed-ntf-content b,
+.fed-ntf-custom .fed-ntf-content i {
+	color: inherit;
+}
+
+.fed-ntf-custom a {
+	color: inherit !important;
+	text-decoration: underline;
+	opacity: 0.95;
+}
+
+.fed-ntf-custom a:hover {
+	opacity: 1;
+	filter: brightness(1.2);
+}
+
+.fed-ntf-content a {
+	color: #4f46e5;
+	text-decoration: underline;
+	font-weight: 600;
+}
+
+.fed-ntf-content a:hover {
+	color: #4338ca;
+}
+
+.fed-ntf-content p {
+	margin: 0 0 0.5rem 0;
+}
+
+.fed-ntf-content p:last-child {
+	margin-bottom: 0;
+}
+
+/* Rich Media and WYSIWYG Content Styles */
+.fed-ntf-content img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 0.5rem;
+	margin: 0.5rem 0;
+	display: inline-block;
+}
+
+.fed-ntf-content video,
+.fed-ntf-content iframe,
+.fed-ntf-content embed,
+.fed-ntf-content object {
+	max-width: 100%;
+	border-radius: 0.5rem;
+	margin: 0.5rem 0;
+}
+
+.fed-ntf-content ul,
+.fed-ntf-content ol {
+	margin: 0.5rem 0;
+	padding-left: 1.25rem;
+	list-style-type: disc;
+}
+
+.fed-ntf-content ol {
+	list-style-type: decimal;
+}
+
+.fed-ntf-content h1,
+.fed-ntf-content h2,
+.fed-ntf-content h3,
+.fed-ntf-content h4,
+.fed-ntf-content h5,
+.fed-ntf-content h6 {
+	margin: 0.5rem 0 0.25rem 0;
+	font-weight: 700;
+	color: inherit;
+}
+
+.fed-ntf-content blockquote {
+	border-left: 3px solid rgba(0, 0, 0, 0.2);
+	margin: 0.5rem 0;
+	padding-left: 0.75rem;
+	font-style: italic;
+	opacity: 0.9;
+}
+
+/* Admin WP Editor Box Styling */
+.fed-wp-editor-wrap .wp-editor-wrap {
+	width: 100% !important;
+}
+
+.fed-wp-editor-wrap .wp-editor-container {
+	border: 1px solid #e2e8f0 !important;
+	border-radius: 0.75rem !important;
+	overflow: hidden !important;
+	background: #ffffff !important;
+}
+
+.fed-wp-editor-wrap .quicktags-toolbar {
+	background: #f8fafc !important;
+	border-bottom: 1px solid #e2e8f0 !important;
+	padding: 6px 8px !important;
+}
+
+.fed-wp-editor-wrap .wp-switch-editor {
+	border-radius: 6px 6px 0 0 !important;
+	font-size: 11px !important;
+	padding: 3px 10px !important;
+}
+
+.fed-wp-editor-wrap div.mce-toolbar-grp {
+	background: #f8fafc !important;
+	border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.fed-wp-editor-wrap .wp-media-buttons {
+	margin-bottom: 6px;
+}
+
+.fed-wp-editor-wrap .wp-media-buttons .button {
+	font-size: 11px !important;
+	border-radius: 8px !important;
+	padding: 2px 10px !important;
+	height: auto !important;
+	line-height: 24px !important;
+}
+
+
+/* Admin Specific Styles & Table Layout Fixes */
+.fed-ntf-admin-container {
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+#fed_ntf_table {
+	width: 100% !important;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+#fed_ntf_table th,
+#fed_ntf_table td {
+	vertical-align: middle;
+	box-sizing: border-box;
+}
+
+.fed-ntf-status-dot {
+	display: inline-block;
+}
+
+/* Critical Fix: Ensure button text is ALWAYS visible white on hover/active/focus */
+.fed-ntf-admin-container .fed-btn-primary,
+.fed-ntf-admin-container .fed-btn-primary:hover,
+.fed-ntf-admin-container .fed-btn-primary:focus,
+.fed-ntf-admin-container .fed-btn-primary:active,
+.fed-ntf-admin-container a.fed-btn-primary,
+.fed-ntf-admin-container a.fed-btn-primary:hover,
+.fed-ntf-admin-container a.fed-btn-primary:focus,
+.fed-ntf-admin-container a.fed-btn-primary:active,
+.fed-ntf-admin-container a.fed-btn-primary:visited,
+.fed-ntf-admin-container .bg-indigo-600,
+.fed-ntf-admin-container .bg-indigo-600:hover,
+.fed-ntf-admin-container .bg-indigo-500,
+.fed-ntf-admin-container .bg-indigo-500:hover {
+	color: #ffffff !important;
+	text-decoration: none !important;
+}
+
+.fed-ntf-admin-container .fed-btn-primary *,
+.fed-ntf-admin-container .fed-btn-primary:hover *,
+.fed-ntf-admin-container a.fed-btn-primary *,
+.fed-ntf-admin-container a.fed-btn-primary:hover *,
+.fed-ntf-admin-container a.fed-btn-primary:focus *,
+.fed-ntf-admin-container a.fed-btn-primary:active * {
+	color: #ffffff !important;
 }

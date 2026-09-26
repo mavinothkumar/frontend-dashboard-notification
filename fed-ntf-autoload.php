@@ -1,28 +1,21 @@
 <?php
 /**
- * Include all files.
+ * Autoload Files for Frontend Dashboard Notification.
  *
- * @package Frontend Dashboard.
+ * @package Frontend Dashboard Notification.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Admin Files
- */
-
 $files = array(
-	'/includes/admin/menu/class-fed-ntf-main-menu.php',
-	'/includes/admin/menu/class-fed-ntf-menu-general.php',
-	'/includes/admin/custom-post/class-fed-ntf-custom-post.php',
-	'/includes/admin/custom-post/class-fed-ntf-custom-meta.php',
-	'/includes/frontend/dashboard/class-fed-ntf-dashboard-notification.php',
-	'/includes/frontend/controller/class-fed-ntf-notification-controller.php',
-	'/assets/enqueue.php',
 	'/includes/function.php',
-
+	'/includes/admin/custom-post/class-fed-ntf-custom-post.php',
+	'/includes/admin/menu/class-fed-ntf-admin-settings.php',
+	'/includes/frontend/controller/class-fed-ntf-notification-controller.php',
+	'/includes/frontend/dashboard/class-fed-ntf-dashboard-notification.php',
+	'/assets/enqueue.php',
 );
 
 foreach ( $files as $file ) {

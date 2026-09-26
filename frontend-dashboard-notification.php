@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Frontend Dashboard Notification
  * Plugin URI: https://buffercode.com/plugin/frontend-dashboard-notification
- * Description: Frontend Dashboard Notification is an add-on for Frontend Dashboard WordPress plugin which allows user to show notification in Frontend Dashboard page.
+ * Description: Frontend Dashboard Notification is an add-on for Frontend Dashboard WordPress plugin which allows you to show notifications in Frontend Dashboard pages.
  * Version: 3.0.0
  * Author: vinoth06
  * Author URI: https://buffercode.com/
@@ -11,7 +11,7 @@
  * Text Domain: frontend-dashboard-notification
  * Domain Path: /languages
  *
- * @package frontened-dashboard-notification
+ * @package frontend-dashboard-notification
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -27,7 +27,8 @@ if ( $fed_check && is_plugin_active( 'frontend-dashboard/frontend-dashboard.php'
 	 * Version Number
 	 */
 	define( 'BC_FED_NTF_PLUGIN_VERSION', '3.0.0' );
-	define( 'BC_FED_NTF_PLUGIN_VERSION_TYPE', 'PRO' );
+	define( 'BC_FED_NTF_PLUGIN_VERSION_TYPE', 'FREE' );
+	define( 'BC_FED_NTF_PLUGIN_SLUG', 'frontend-dashboard-notification' );
 
 	/**
 	 * App Name
@@ -53,13 +54,21 @@ if ( $fed_check && is_plugin_active( 'frontend-dashboard/frontend-dashboard.php'
 
 	require_once BC_FED_NTF_PLUGIN_DIR . '/fed-ntf-autoload.php';
 } else {
+	/**
+	 * Global Admin Notification for Frontend Dashboard Dependency
+	 */
 	function fed_global_fed_notification() {
 		?>
 		<div class="notice notice-warning">
 			<p>
 				<b>
 					<?php
-					esc_attr_e( 'Please install <a href="https://buffercode.com/plugin/frontend-dashboard">Frontend Dashboard</a> to use this plugin [Frontend Dashboard Pages]','frontend-dashboard-pages' );
+					printf(
+						/* translators: 1: Plugin page URL, 2: Plugin Name */
+						esc_html__( 'Please install and activate %1$s to use this plugin %2$s.', 'frontend-dashboard-notification' ),
+						'<a href="https://buffercode.com/plugin/frontend-dashboard" target="_blank" rel="noopener noreferrer">Frontend Dashboard</a>',
+						'[Frontend Dashboard Notification]'
+					);
 					?>
 				</b>
 			</p>
@@ -68,6 +77,4 @@ if ( $fed_check && is_plugin_active( 'frontend-dashboard/frontend-dashboard.php'
 	}
 
 	add_action( 'admin_notices', 'fed_global_fed_notification' );
-	?>
-	<?php
 }
