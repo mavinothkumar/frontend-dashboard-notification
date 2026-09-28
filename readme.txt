@@ -40,6 +40,12 @@ Frontend Dashboard Notification is a free add-on for Frontend Dashboard which al
 3. Ensure **Frontend Dashboard** is also installed and activated.
 4. Navigate to **Frontend Dashboard > Settings > Notification** to create and manage notifications.
 
+For more documentation and FAQs, visit [https://faq.frontenddashboard.com/addons-free/notification/overview/](https://faq.frontenddashboard.com/addons-free/notification/overview/).
+
+== Screenshots ==
+1. Settings
+2. Frontend View
+
 == Changelog ==
 
 = 3.0.0 =
@@ -50,6 +56,9 @@ Frontend Dashboard Notification is a free add-on for Frontend Dashboard which al
 * Added responsive slot and menu targeting.
 * Refactored frontend rendering engine for Frontend Dashboard 3.0+ App Shell compatibility.
 * Full compatibility with WordPress 6.7 and PHP 8.0 / 8.1 / 8.2 / 8.3.
+
+More Changelogs:
+https://faq.frontenddashboard.com/changelog/notification/
 
 == Upgrade Notice ==
 
