@@ -1,10 +1,10 @@
 === Frontend Dashboard Notification ===
 Contributors: vinoth06, buffercode
-Tags: dashboard, frontend dashboard, notification, notices, alerts, announcements, banner, broadcast
+Tags: frontend dashboard, notification, notices, alerts, announcements
 Donate link: https://www.paypal.com/paypalme2/buffercode
-Requires at least: 5.8
-Tested up to: 6.7
-Requires PHP: 7.4
+Requires at least: 6.1
+Tested up to: 7.1
+Requires PHP: 8.0
 Stable tag: 3.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -49,6 +49,7 @@ Frontend Dashboard Notification is a free add-on for Frontend Dashboard which al
 * Added instant AJAX status toggle and SweetAlert confirmation modals.
 * Added responsive slot and menu targeting.
 * Refactored frontend rendering engine for Frontend Dashboard 3.0+ App Shell compatibility.
+* Full compatibility with WordPress 6.7 and PHP 8.0 / 8.1 / 8.2 / 8.3.
 
 == Upgrade Notice ==
 
