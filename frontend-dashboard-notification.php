@@ -3,10 +3,10 @@
  * Plugin Name: Frontend Dashboard Notification
  * Plugin URI: https://buffercode.com/plugin/frontend-dashboard-notification
  * Description: Frontend Dashboard Notification is an add-on for Frontend Dashboard WordPress plugin which allows you to show notifications in Frontend Dashboard pages.
- * Version: 3.0.0
+ * Version: 3.0.1
  * Author: vinoth06
  * Author URI: https://buffercode.com/
- * License: GPLv2
+ * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: frontend-dashboard-notification
  * Domain Path: /languages
@@ -26,7 +26,7 @@ if ( $fed_check && is_plugin_active( 'frontend-dashboard/frontend-dashboard.php'
 	/**
 	 * Version Number
 	 */
-	define( 'BC_FED_NTF_PLUGIN_VERSION', '3.0.0' );
+	define( 'BC_FED_NTF_PLUGIN_VERSION', '3.0.1' );
 	define( 'BC_FED_NTF_PLUGIN_VERSION_TYPE', 'FREE' );
 	define( 'BC_FED_NTF_PLUGIN_SLUG', 'frontend-dashboard-notification' );
 

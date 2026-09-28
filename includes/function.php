@@ -142,7 +142,6 @@ function fed_ntf_get_notifications_query( $paged = 1, $per_page = 10 ) {
 		'paged'            => $paged,
 		'orderby'          => 'date',
 		'order'            => 'DESC',
-		'suppress_filters' => true,
 	);
 
 	return new WP_Query( $args );
@@ -161,7 +160,7 @@ function fed_ntf_get_all_notifications() {
 			'numberposts'      => -1,
 			'orderby'          => 'date',
 			'order'            => 'DESC',
-			'suppress_filters' => true,
 		)
 	);
 }
+

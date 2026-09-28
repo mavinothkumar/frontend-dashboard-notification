@@ -157,8 +157,9 @@ if ( ! class_exists( 'FED_NTF_Dashboard_Notification' ) ) {
 							<?php endif; ?>
 							<div class="text-xs font-normal leading-relaxed fed-ntf-content <?php echo $is_custom ? '' : 'text-slate-700'; ?>"
 								 <?php echo ! empty( $text_style_attr ) ? 'style="' . esc_attr( $text_style_attr ) . '"' : ''; ?>>
-								<?php echo $content_output; ?>
+								<?php echo wp_kses_post( $content_output ); ?>
 							</div>
+
 						</div>
 					</div>
 

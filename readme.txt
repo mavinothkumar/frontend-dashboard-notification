@@ -5,11 +5,11 @@ Donate link: https://www.paypal.com/paypalme2/buffercode
 Requires at least: 6.1
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 3.0.0
+Stable tag: 3.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Frontend Dashboard Notification is a free add-on for Frontend Dashboard which allows administrators to create and manage rich alerts and notifications across dashboard pages.
+Create and broadcast rich notifications, announcements, and alerts across Frontend Dashboard pages.
 
 == Description ==
 
@@ -48,6 +48,9 @@ For more documentation and FAQs, visit [https://faq.frontenddashboard.com/addons
 
 == Changelog ==
 
+= 3.0.1 =
+* Fix: WordPress.org plugin review and security compliance improvements.
+
 = 3.0.0 =
 * Complete modernization: Replaced legacy post meta editor with dedicated form fields inside Frontend Dashboard Settings.
 * Added rich WYSIWYG editor support (wp_editor) with image and media upload capabilities for notification details.
@@ -61,6 +64,9 @@ More Changelogs:
 https://faq.frontenddashboard.com/changelog/notification/
 
 == Upgrade Notice ==
+
+= 3.0.1 =
+Minor update: Security escaping and WordPress standards compliance fixes.
 
 = 3.0.0 =
 Major release: Modernized form interface, rich WYSIWYG editor support, live theme styling, and full compatibility with Frontend Dashboard 3.0.0.
